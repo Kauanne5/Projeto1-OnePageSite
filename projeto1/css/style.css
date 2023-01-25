@@ -1,0 +1,358 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+xs: 0,        //Smartphones em modo retrato
+sm: 576px,    //Smartphones em modo paisagem ou Tablets em modo retrato
+md: 768px,    //Tablets em modo paisagem
+lg: 992px,    //Desktops
+xl: 1200px,   //Desktops com alta definição HD e FHD
+xxl: 2000px   //Desktops com ultra alta definição QHD e UHD
+*/
+header {
+  background-color: #111111;
+  height: 50px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+header img {
+  height: 100px;
+  width: 100px;
+}
+header nav {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+header nav button {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 30px;
+  border: 0;
+}
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #111111;
+  visibility: hidden;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  line-height: 30px;
+}
+
+#home {
+  background: url(../img/Destaque_o20.png) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+#home #tituloHome {
+  padding-top: 38vh;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  font-size: 35px;
+}
+#home .html {
+  font-style: normal;
+  color: #e44d26;
+}
+#home .css {
+  font-style: normal;
+  color: #264de4;
+}
+#home .js {
+  font-style: normal;
+  color: #e5a228;
+}
+#home #descricaoHome {
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+
+section {
+  height: 190vw;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#HTML5 {
+  background-color: #ee7744;
+  text-align: center;
+}
+#HTML5 #logoHtml {
+  padding-top: 90px;
+}
+#HTML5 #tituloHtml, #HTML5 #subHtml {
+  padding-top: 60px;
+}
+#HTML5 #textHtml {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  text-align: justify;
+}
+
+#CSS3 {
+  background-color: #2965f1;
+  text-align: center;
+}
+#CSS3 img {
+  padding-top: 90px;
+}
+#CSS3 h2 {
+  padding-top: 60px;
+}
+#CSS3 h3 {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  text-align: justify;
+}
+
+#JS {
+  background-color: #f1bf26;
+  text-align: center;
+}
+#JS img {
+  padding-top: 90px;
+}
+#JS h2 {
+  padding-top: 60px;
+}
+#JS h3 {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  text-align: justify;
+}
+
+#links {
+  background-color: #cacaca;
+  height: 290vw;
+}
+#links #tituloLinks {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 40px;
+}
+#links .subLinks {
+  text-align: center;
+  font-size: 23px;
+  padding-top: 35px;
+}
+#links .links li {
+  padding-top: 20px;
+  display: inline-flex;
+}
+#links .links li .definição {
+  align-self: center;
+  padding-left: 10px;
+}
+
+.principal {
+  background-color: #111111;
+  border: none;
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 40px;
+}
+
+footer {
+  height: 30vw;
+  background-color: #111111;
+}
+footer #img {
+  display: flex;
+}
+footer #img #social {
+  width: 100%;
+  list-style-type: none;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  padding: 2% 10%;
+  padding-top: 15px;
+}
+footer #textFooter {
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+  padding-top: 5px;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 80px;
+  }
+  header img {
+    height: 200px;
+    width: 200px;
+  }
+  header nav {
+    height: 80px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav button {
+    display: none;
+  }
+  header nav ul {
+    flex-direction: row;
+    visibility: visible;
+    padding-right: 15px;
+  }
+  header nav ul a {
+    font-size: 20px;
+  }
+  section {
+    height: 37vw;
+  }
+  #home {
+    height: 37vw;
+  }
+  #home #tituloHome {
+    font-size: 50px;
+    padding-top: 120px;
+  }
+  #home #descricaoHome {
+    font-size: 40px;
+    padding-top: 60px;
+  }
+  #HTML5 {
+    padding-left: 190px;
+    padding-right: 190px;
+  }
+  #HTML5 #logoHtml {
+    float: left;
+    padding-top: 7vw;
+    padding-right: 15px;
+  }
+  #HTML5 #tituloHtml {
+    padding-top: 80px;
+    font-size: 35px;
+  }
+  #HTML5 #subHtml {
+    padding-top: 30px;
+    font-size: 30px;
+  }
+  #HTML5 #textHtml {
+    padding-top: 25px;
+    font-size: 25px;
+  }
+  #CSS3 {
+    padding-left: 190px;
+    padding-right: 190px;
+  }
+  #CSS3 #logoCss {
+    float: right;
+    padding-top: 7vw;
+    padding-right: 15px;
+  }
+  #CSS3 #tituloCss {
+    padding-top: 80px;
+    font-size: 35px;
+  }
+  #CSS3 #subCss {
+    padding-top: 30px;
+    font-size: 30px;
+  }
+  #CSS3 #textCss {
+    padding-top: 25px;
+    font-size: 25px;
+  }
+  #JS {
+    padding-left: 190px;
+    padding-right: 190px;
+  }
+  #JS #logoJs {
+    float: left;
+    padding-top: 7vw;
+    padding-right: 15px;
+  }
+  #JS #tituloJs {
+    padding-top: 80px;
+    font-size: 35px;
+  }
+  #JS #subJs {
+    padding-top: 30px;
+    font-size: 30px;
+  }
+  #JS #textJs {
+    padding-top: 25px;
+    font-size: 25px;
+  }
+  #links {
+    height: 44vw;
+    align-items: center;
+  }
+  #links #tituloLinks {
+    font-size: 40px;
+  }
+  #links #planejamento {
+    width: 30%;
+    float: left;
+    padding-left: 9vw;
+  }
+  #links #programacao {
+    width: 30%;
+    float: left;
+    padding-left: 9vw;
+  }
+  #links #ajuda {
+    width: 30%;
+    float: left;
+    padding-left: 9vw;
+  }
+  #links .subLinks {
+    font-size: 30px;
+    text-align: center;
+  }
+  footer {
+    height: 7vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+  }
+  footer #img #social {
+    padding: 0;
+    flex-direction: row;
+  }
+  footer #img #social li {
+    padding: 0 10px;
+  }
+  footer #textFooter {
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+  }
+}/*# sourceMappingURL=style.css.map */

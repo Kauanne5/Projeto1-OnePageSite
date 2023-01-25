@@ -1,0 +1,376 @@
+// Cores
+$HTMLColor01: #e44d26;
+$HTMLColor02: #ee7744;
+$CSSColor01: #264de4;
+$CSSColor02: #2965f1;
+$JSColor01: #e5a228;
+$JSColor02: #f1bf26;
+$LinksUteis: #cacaca;
+$black: #111111;
+$white: #ffffff;
+
+// Reset CSS    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+xs: 0,        //Smartphones em modo retrato
+sm: 576px,    //Smartphones em modo paisagem ou Tablets em modo retrato
+md: 768px,    //Tablets em modo paisagem
+lg: 992px,    //Desktops
+xl: 1200px,   //Desktops com alta definição HD e FHD
+xxl: 2000px   //Desktops com ultra alta definição QHD e UHD
+*/
+
+//First Mobile
+header{
+    background-color: $black;
+    height: 50px;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    img{
+        height: 100px;
+        width: 100px;
+    }
+    nav{
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        button{
+            height: 50px;
+            width: 50px;
+            background-color: transparent;
+            color: $white;
+            font-size: 30px;
+            border: 0;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start; 
+            background-color: $black;
+            visibility: hidden;
+            li{
+                list-style: none;
+                a{
+                    color: white;
+                    text-decoration: none;
+                    padding: 10px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+#home{
+    background: url(../img/Destaque_o20.png) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    #tituloHome{
+        padding-top: 38vh;
+        padding-left: 50px;
+        padding-right: 50px; 
+        text-align: center;
+        font-size: 35px;  
+    }
+    .html{
+        font-style: normal;
+        color: $HTMLColor01;
+    }
+    .css{
+        font-style: normal;
+        color: $CSSColor01;
+    }
+    .js{
+        font-style: normal;
+        color: $JSColor01;
+    }
+    #descricaoHome{
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+section{
+    height: 190vw;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#HTML5{
+    background-color: $HTMLColor02;
+    text-align: center;
+    #logoHtml{
+        padding-top: 90px;
+    }
+    #tituloHtml, #subHtml{
+        padding-top: 60px;
+    }
+    #textHtml{
+        padding-top: 60px;
+        padding-bottom: 50px;
+        text-align: justify;
+    }
+}
+
+#CSS3{
+    background-color: $CSSColor02;
+    text-align: center;
+    img{
+        padding-top: 90px;
+    }
+    h2{
+        padding-top: 60px;
+    }
+    h3{
+        padding-top: 60px;
+        padding-bottom: 50px;
+        text-align: justify;
+    }
+}
+
+#JS{
+    background-color: $JSColor02;
+    text-align: center;
+    img{
+        padding-top: 90px;
+    }
+    h2{
+        padding-top: 60px;
+    }
+    h3{
+        padding-top: 60px;
+        padding-bottom: 50px;
+        text-align: justify;
+    }
+}
+
+#links{
+    background-color: $LinksUteis;
+    height: 290vw;
+    #tituloLinks{
+        text-align: center;
+        font-size: 30px;
+        padding-top: 40px;
+    }
+    .subLinks{
+        text-align: center;
+        font-size: 23px;
+        padding-top: 35px;
+    }
+    .links{
+        li{
+            padding-top: 20px;
+            display: inline-flex;
+            .definição{
+                align-self: center;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+.principal{
+    background-color: $black;
+    border: none;
+    color: $white;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 40px;
+}
+
+footer{
+    height: 30vw;
+    background-color: $black;
+    #img{
+        display: flex;
+        #social{
+             width: 100%;
+            list-style-type: none;
+            padding-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline-start: 0;
+            padding: 2% 10%;
+            padding-top: 15px;
+        }
+    }
+    #textFooter{
+        text-align: center;
+        font-size: 20px;
+        color: $white;
+        padding-top: 5px;
+    }
+}
+
+//Tablets em modo paisagem ou maior
+@media (min-width: 768px) {
+    header{
+        height: 80px;
+        img{
+            height: 200px;
+            width: 200px;
+        }
+        nav{
+            height: 80px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            button{
+                display: none;
+            }
+            ul{
+                flex-direction: row;
+                visibility: visible;
+                padding-right: 15px;
+                a{
+                    font-size: 20px;
+                }
+            }
+        }
+        
+    }
+    section{
+        height: 37vw;
+    }
+    #home{
+        height: 37vw;
+        #tituloHome{
+            font-size: 50px;
+            padding-top: 120px;
+        }
+        #descricaoHome{
+            font-size: 40px;
+            padding-top: 60px;
+        }
+    }
+    #HTML5{
+        padding-left: 190px;
+        padding-right: 190px;
+        #logoHtml{
+            float: left;
+            padding-top: 7vw;
+            padding-right: 15px;
+        }
+        #tituloHtml{
+            padding-top: 80px;
+            font-size: 35px;
+        }
+        #subHtml{
+            padding-top: 30px;
+            font-size: 30px;
+        }
+        #textHtml{
+            padding-top: 25px;
+            font-size: 25px;
+        }
+    }
+    #CSS3{
+        padding-left: 190px;
+        padding-right: 190px;
+        #logoCss{
+            float: right;
+            padding-top: 7vw;
+            padding-right: 15px;
+        }
+        #tituloCss{
+            padding-top: 80px;
+            font-size: 35px;
+        }
+        #subCss{
+            padding-top: 30px;
+            font-size: 30px;
+        }
+        #textCss{
+            padding-top: 25px;
+            font-size: 25px;
+        }
+    }
+    #JS{
+        padding-left: 190px;
+        padding-right: 190px;
+        #logoJs{
+            float: left;
+            padding-top: 7vw;
+            padding-right: 15px;
+        }
+        #tituloJs{
+            padding-top: 80px;
+            font-size: 35px;
+        }
+        #subJs{
+            padding-top: 30px;
+            font-size: 30px;
+        }
+        #textJs{
+            padding-top: 25px;
+            font-size: 25px;
+        }
+    }
+    #links{
+        height: 44vw;
+        align-items: center;
+        #tituloLinks{
+            font-size: 40px;
+        }
+        #planejamento{
+            width: 30%;
+            float: left;
+            padding-left: 9vw;
+        }
+        #programacao{
+            width: 30%;
+            float: left;
+            padding-left: 9vw;
+        }
+        #ajuda{
+            width: 30%;
+            float: left;
+            padding-left: 9vw;
+        }
+        .subLinks{
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+    footer{
+        height: 7vw;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3%;
+        #img{
+            #social{
+                padding: 0;
+                flex-direction: row;
+                li{
+                    padding: 0 10px;
+                }
+            }
+        }
+        #textFooter{
+            text-align: center;
+            font-size: 20px;
+            color: $white;
+        }
+    }
+}
